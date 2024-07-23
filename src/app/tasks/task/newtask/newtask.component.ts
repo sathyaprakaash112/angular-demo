@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NewtaskComponent {
   @Output() cancel = new EventEmitter<void>();
+  enteredTitle = '';
 
   onCancelled(){
     this.cancel.emit();
