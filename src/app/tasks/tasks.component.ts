@@ -14,7 +14,6 @@ export class TasksComponent {
   @Input({required:true}) userId! : string;
   @Input({required:true}) name!:string;
   isAddingTask = false;
-  
 
 
   tasks = [{
@@ -52,6 +51,10 @@ onCompleteTask(id: string){
 
 onAddTask() {
   this.isAddingTask = true;
+}
+
+onCancel(){
+  this.isAddingTask = false;
 }
 
 }
