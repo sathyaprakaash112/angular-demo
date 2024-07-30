@@ -20,16 +20,10 @@ export class TasksComponent {
   @Input({required:true}) userId! : string;
   @Input({required:true}) name!:string;
   isAddingTask = false;
-
-
   
 
 get selectedUserTasks(){
   return this.tasksService.getUserTasks(this.userId);
-}
-
-onCompleteTask(id: string){
-   this.tasksService.removeTask(id);
 }
 
 onAddTask() {
